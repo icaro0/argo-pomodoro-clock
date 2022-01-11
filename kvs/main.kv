@@ -1,0 +1,11 @@
+#:kivy 1.0
+<MainScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title: "Pomodoro timer"
+            left_action_items: [["menu", lambda x: None]]
+            theme_text_color: "Custom"
+            specific_text_color: 0,0,0,1
+            md_bg_color: 1,1,1,1
+        CustomBottomNavigation:

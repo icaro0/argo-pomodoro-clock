@@ -1,0 +1,41 @@
+#:kivy 1.0
+<LoginScreen>:
+    MDBoxLayout:
+        orientation:'vertical'
+        padding: [dp(10), dp(10),dp(10),dp(10)]
+        
+        MDLabel:
+            text: "Login Screen"
+            size_hint_y: .1
+            theme_text_color: 'Custom'
+            color: 51/255, 54/255, 66/255, 1
+            font_size: '20sp'
+            halign: "center"
+            bold: True
+        MDTextField:
+            hint_text: "Username"
+            required: True
+            helper_text_mode: 'on_error'
+            helper_text: "Enter username"
+        MDTextField:
+            hint_text: "Password"
+            required: True
+            helper_text_mode: 'on_error'
+            helper_text: "Enter password"
+            icon_right: 'eye-off'
+            password:True
+
+        MDFillRoundFlatButton:
+            text: "Log in"
+            size_hint_y: .025
+            size_hint_x: 1
+            theme_text_color: 'Custom'
+            background_color: 87/255, 142/255, 229/255, 1
+            halign: "center"
+        MDLabel:
+            text: "Don't have an account? Log in"
+            size_hint_y: .1
+            color: 133/255, 138/255, 147/255, 1
+            font_size: '15sp'
+            halign: "center"
+        

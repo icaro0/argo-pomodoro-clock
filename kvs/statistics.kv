@@ -1,0 +1,20 @@
+#:kivy 1.0
+<StatisticsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDBoxLayout:
+            orientation: 'vertical'
+            MDTabs:
+                tab_padding: dp(5),dp(5),dp(5),dp(5)
+                background_color: 246/255, 246/255, 246/255, 1
+                text_color_normal: 75/255, 75/255, 75/255, 1
+                text_color_active: 38/255, 38/255, 38/255, 1
+                ProjectsTab:
+                    title: "Projects"
+                TimelineTab:
+                    title: "Timeline"
+                    content_text: f"This is an example text for {self.title}"
+                TimelineTab:
+                    title: "Daily"
+                    content_text: f"This is an example text for {self.title}"
+            

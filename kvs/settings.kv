@@ -1,0 +1,185 @@
+#:kivy 1.0
+<SettingsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: [dp(10),dp(10),dp(10),dp(10)]
+            spacing: dp(20)
+            MDLabel:
+                text: "Pomodoro"
+                color: 3/255, 27/255, 68/255, 1
+                font_size: '15sp'
+                size_hint_x: 1
+                bold: True
+                theme_text_color: "Custom"
+                md_bg_color: 250/255, 250/255, 253/255,1
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint_x: 1
+                spacing: dp(50)
+                MDLabel:
+                    text: "Focus time"
+                    color: 3/255, 27/255, 68/255, 1
+                    font_size: '15dp'
+                    theme_text_color: "Custom"
+                    md_bg_color: 250/255, 250/255, 253/255,1
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    MDIconButton:
+                        icon: "minus-circle"
+                        on_release: if app.focus_time > 0: app.focus_time = app.focus_time - 1
+                    MDLabel:
+                        text: "{}".format(app.focus_time)
+                        color: 3/255, 27/255, 68/255, 1
+                        font_size: '15dp'
+                        theme_text_color: "Custom"
+                        md_bg_color: 250/255, 250/255, 253/255,1
+                        valign: 'center'
+                        halign: 'center'
+                        text_size:self.size
+                    MDIconButton:
+                        icon: "plus-circle"
+                        on_release: if app.focus_time < 45: app.focus_time = app.focus_time + 1
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint_x: 1
+                spacing: dp(50)
+                MDLabel:
+                    text: "Short Break"
+                    color: 3/255, 27/255, 68/255, 1
+                    font_size: '15dp'
+                    theme_text_color: "Custom"
+                    md_bg_color: 250/255, 250/255, 253/255,1
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    MDIconButton:
+                        icon: "minus-circle"
+                        on_release: if app.short_break > 1: app.short_break = app.short_break - 1
+                    MDLabel:
+                        text: "{}".format(app.short_break)
+                        color: 3/255, 27/255, 68/255, 1
+                        font_size: '15dp'
+                        theme_text_color: "Custom"
+                        md_bg_color: 250/255, 250/255, 253/255,1
+                        valign: 'center'
+                        halign: 'center'
+                        text_size:self.size
+                    MDIconButton:
+                        icon: "plus-circle"
+                        on_release: if app.short_break < 45: app.short_break = app.short_break + 1
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint_x: 1
+                spacing: dp(50)
+                MDLabel:
+                    text: "Long Break"
+                    color: 3/255, 27/255, 68/255, 1
+                    font_size: '15dp'
+                    theme_text_color: "Custom"
+                    md_bg_color: 250/255, 250/255, 253/255,1
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    MDIconButton:
+                        icon: "minus-circle"
+                        on_release: if app.long_break > 1: app.long_break = app.long_break - 1
+                    MDLabel:
+                        text: "{}".format(app.long_break)
+                        color: 3/255, 27/255, 68/255, 1
+                        font_size: '15dp'
+                        theme_text_color: "Custom"
+                        md_bg_color: 250/255, 250/255, 253/255,1
+                        valign: 'center'
+                        halign: 'center'
+                        text_size:self.size
+                    MDIconButton:
+                        icon: "plus-circle"
+                        on_release: if app.long_break < 45: app.long_break = app.long_break + 1
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint_x: 1
+                spacing: dp(50)
+                MDLabel:
+                    text: "Working sessions"
+                    color: 3/255, 27/255, 68/255, 1
+                    font_size: '15dp'
+                    theme_text_color: "Custom"
+                    md_bg_color: 250/255, 250/255, 253/255,1
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    MDIconButton:
+                        icon: "minus-circle"
+                        on_release: if app.working_sessions > 0: app.working_sessions = app.working_sessions - 1
+                    MDLabel:
+                        text: "{}".format(app.working_sessions)
+                        color: 3/255, 27/255, 68/255, 1
+                        font_size: '15dp'
+                        theme_text_color: "Custom"
+                        md_bg_color: 250/255, 250/255, 253/255,1
+                        valign: 'center'
+                        halign: 'center'
+                        text_size:self.size
+                    MDIconButton:
+                        icon: "plus-circle"
+                        on_release: if app.working_sessions < 45: app.working_sessions = app.working_sessions + 1
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: [dp(10),dp(10),dp(10),dp(10)]
+            MDLabel:
+                text: "Night mode"
+                color: 3/255, 27/255, 68/255, 1
+                font_size: '15sp'
+                size_hint_x: 1
+                bold: True
+                theme_text_color: "Custom"
+                md_bg_color: 250/255, 250/255, 253/255,1
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint_x: 1
+                MDLabel:
+                    text: "Night mode"
+                    color: 3/255, 27/255, 68/255, 1
+                    font_size: '15dp'
+                    theme_text_color: "Custom"
+                    md_bg_color: 250/255, 250/255, 253/255,1
+                MDSwitch:
+                    size_hint_x: None
+                    width: "30dp"
+                    pos_hint: {'center_y': .5}
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint_x: 1
+                MDLabel:
+                    text: "Automatically"
+                    color: 3/255, 27/255, 68/255, 1
+                    font_size: '15dp'
+                    theme_text_color: "Custom"
+                    md_bg_color: 250/255, 250/255, 253/255,1
+                MDSwitch:
+                    size_hint_x: None
+                    width: "30dp"
+                    pos_hint: {'center_y': .5}
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: [dp(10),dp(10),dp(10),dp(10)]
+            MDLabel:
+                text: "Do not Distrube"
+                color: 3/255, 27/255, 68/255, 1
+                font_size: '15sp'
+                size_hint_x: 1
+                bold: True
+                theme_text_color: "Custom"
+                md_bg_color: 250/255, 250/255, 253/255,1
+            MDBoxLayout:
+                orientation: 'horizontal'
+                size_hint_x: 1
+                MDLabel:
+                    text: "Do not Distrube mode"
+                    color: 3/255, 27/255, 68/255, 1
+                    font_size: '15dp'
+                    theme_text_color: "Custom"
+                    md_bg_color: 250/255, 250/255, 253/255,1
+                MDSwitch:
+                    size_hint_x: None
+                    width: "30dp"
+                    pos_hint: {'center_y': .5}

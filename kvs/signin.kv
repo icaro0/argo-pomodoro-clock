@@ -1,0 +1,58 @@
+#:kivy 1.0
+<SigninScreen>:
+    MDBoxLayout:
+        orientation:'vertical'
+        padding: [dp(10), dp(10),dp(10),dp(10)]
+        Image:
+            source: 'assets/imgs/login_background.png'
+            size_hint_y: .4
+        MDLabel:
+            text: "Let's get started"
+            size_hint_y: .1
+            theme_text_color: 'Custom'
+            color: 51/255, 54/255, 66/255, 1
+            font_size: '20sp'
+            halign: "center"
+            bold: True
+        MDLabel:
+            text: "Pomodoro technique allows you to work for a long time without feeling tired"
+            size_hint_y: .1
+            theme_text_color: 'Custom'
+            color: 93/255, 98/255, 110/255, 1
+            font_size: '15sp'
+            halign: "center"
+        MDFillRoundFlatButton:
+            text: "Log in"
+            size_hint_y: .1
+            size_hint_x: 1
+            theme_text_color: 'Custom'
+            background_color: 87/255, 142/255, 229/255, 1
+            halign: "center"
+        MDLabel:
+            text: "Don't have an account? Log in"
+            size_hint_y: .1
+            color: 133/255, 138/255, 147/255, 1
+            font_size: '15sp'
+            halign: "center"
+        MDGridLayout:
+            cols: 2
+            size_hint_y: .2
+            size_hint_x: 1
+            padding: [dp(0), dp(0),dp(0),dp(0)]
+            spacing: [dp(10), dp(0)]
+            MDRectangleFlatIconButton:
+                text: "[b]Facebook[/b]"
+                size_hint_x: .5
+                icon: 'facebook'
+                md_bg_color: 245/255, 247/255, 252/255, 1
+                line_color: 245/255, 247/255, 252/255, 1
+                text_color: 0,0,0,1
+                radius:[10]
+            MDRectangleFlatIconButton:
+                text: "[b]Google[/b]"
+                size_hint_x: .5
+                icon: 'google'
+                md_bg_color: 245/255, 247/255, 252/255, 1
+                line_color: 245/255, 247/255, 252/255, 1
+                text_color: 0,0,0,1
+                radius:[10]

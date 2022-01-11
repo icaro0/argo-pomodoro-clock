@@ -1,0 +1,60 @@
+#:kivy 1.0
+<ProjectsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: [dp(10),dp(10),dp(10),dp(10)]
+            MDLabel:
+                text: "Active"
+                color: 3/255, 27/255, 68/255, 1
+                font_size: '15sp'
+                bold: True
+                theme_text_color: "Custom"
+                md_bg_color: 250/255, 250/255, 253/255,1
+                size_hint_y: .1
+            ScrollView:
+                do_scroll_x: False
+                do_scroll_y: True
+                MDList:
+                    id: active_projects
+                    # orientation: 'vertical'
+                    spacing: 10
+                    # size_hint_y: None
+                    # height: self.minimum_height
+                    # padding: [dp(10),dp(10),dp(10),dp(10)]
+                    # ProjectCard:
+                    #     text: 'Web design'
+                    # ProjectCard:
+                    #     text: 'UX/UI practice'
+                    # ProjectCard:
+                    #     text: 'UX/UI practice'
+                    # ProjectCard:
+                    #     text: 'UX/UI practice'
+                    # ProjectCard:
+                    #     text: 'UX/UI practice'
+
+            MDLabel:
+                text: "Completed"
+                color: 3/255, 27/255, 68/255, 1
+                font_size: '15sp'
+                bold: True
+                theme_text_color: "Custom"
+                md_bg_color: 250/255, 250/255, 253/255,1
+                size_hint_y: .1
+            ScrollView:
+                do_scroll_x: False
+                do_scroll_y: True
+                MDList:
+                    id: completed_projects
+                    spacing: 10
+                    # size_hint_y: None
+                    # height: self.minimum_height
+                    # padding: [dp(10),dp(10),dp(10),dp(10)]
+                    # ProjectCard:
+                    #     text: 'UX/UI practice'
+                    # ProjectCard:
+                    #     text: 'UX/UI practice'
+                    # ProjectCard:
+                    #     text: 'UX/UI practice'
+            

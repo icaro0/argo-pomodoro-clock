@@ -1,0 +1,65 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+<PopomodoroScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: [dp(10),dp(10),dp(10),dp(10)]
+        MDLabel:
+            text: "NEXT TASK"
+            color: 133/255, 138/255, 147/255, 1
+            font_size: '15sp'
+            size_hint_y: .05
+            halign: "center"
+        MDLabel:
+            text: "[b]Dribbble cover design[/b]"
+            markup: True
+            size_hint_y: .05
+            halign: "center"
+        CustomCircularProgress:
+            id: circular_progress
+            size_hint: None, None
+            size: dp(200), dp(200)
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            background_line_width: "5dp"
+            line_width: "10dp"
+            circle_color: 126/255, 208/255, 180/255, 1
+            percent_color: 0, 5/255, 63/255, 1
+            background_circle_color: 1, 1, 1, 1
+            percent_type: "countdown"
+            current_percent: 40
+            percent_size: "40dp"
+        MDLabel:
+            id: actual_status_msg
+            text: "Start pomodoro session"
+            size_hint_y: .1
+            color: 133/255, 138/255, 147/255, 1
+            font_size: '15sp'
+            halign: "center"
+        MDBoxLayout:
+            size_hint_y: .1
+            #cols: 3
+            orientation: 'horizontal'
+            spacing: dp(30)
+            MDIconButton:
+                id: refresh_button
+                icon: "refresh"
+                user_font_size: "36sp"
+                md_bg_color: get_color_from_hex("#ffffff")
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex("#cccccc")
+                on_release: root.reset()
+            MDIconButton:
+                id: play_button
+                icon: "play"
+                user_font_size: "64sp"
+                md_bg_color: get_color_from_hex("#7ed0b4")
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                on_release: root.start()
+            MDIconButton:
+                id: stop_button
+                icon: "stop"
+                user_font_size: "36sp"
+                md_bg_color: get_color_from_hex("#ffffff")
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex("#cccccc")
+                on_release: root.stop()
